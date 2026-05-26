@@ -1,0 +1,48 @@
+﻿@model weather_project.Models.weather_index_view_model
+
+@{
+    ViewData["Title"] = "weather";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <div>
+        <h1 class="h3 mb-1">weather api project</h1>
+        <p class="text-muted mb-0">nested json, dto modely, httpclient a async await</p>
+    </div>
+</div>
+
+<div class="card mb-4 shadow-sm">
+    <div class="card-body">
+        <form method="get" class="row g-3 align-items-end">
+            <div class="col-md-9">
+                <label class="form-label" for="city_name">city name</label>
+                <input id="city_name" name="city_name" value="@Model.city_name" class="form-control" />
+            </div>
+            <div class="col-md-3 d-grid gap-2">
+                <button type="submit" class="btn btn-primary">nacist</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">default</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@if (!string.IsNullOrWhiteSpace(Model.error_message))
+{
+    <div class="alert alert-danger">@Model.error_message</div>
+}
+else if (Model.weather != null)
+{
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h2 class="h4">@Model.weather.location.name, @Model.weather.location.country</h2>
+            <p class="text-muted">@Model.weather.location.region | @Model.weather.location.localtime</p>
+            <div class="row g-3">
+                <div class="col-md-3"><div class="border rounded p-3">teplota: <strong>@Model.weather.current.temp_c °C</strong></div></div>
+                <div class="col-md-3"><div class="border rounded p-3">den/noc: <strong>@Model.weather.current.is_day</strong></div></div>
+                <div class="col-md-3"><div class="border rounded p-3">vitr: <strong>@Model.weather.current.wind_kph km/h</strong></div></div>
+                <div class="col-md-3"><div class="border rounded p-3">vlhkost: <strong>@Model.weather.current.humidity %</strong></div></div>
+                <div class="col-12"><div class="border rounded p-3">stav: <strong>@Model.weather.current.condition.text</strong></div></div>
+            </div>
+        </div>
+    </div>
+}

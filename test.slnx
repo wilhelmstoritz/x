@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="movies_project/movies_project.csproj" />
+  <Project Path="people_project/people_project.csproj" />
+  <Project Path="weather_project/weather_project.csproj" />
+  <Project Path="webapp/webapp.csproj" />
+</Solution>

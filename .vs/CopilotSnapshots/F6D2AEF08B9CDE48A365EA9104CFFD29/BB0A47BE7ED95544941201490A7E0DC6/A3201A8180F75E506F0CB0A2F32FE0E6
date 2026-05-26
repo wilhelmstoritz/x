@@ -1,0 +1,8 @@
+﻿namespace weather_project.Models;
+
+public class weather_api_response
+{
+    public weather_location location { get; set; } = new();
+
+    public weather_current current { get; set; } = new();
+}

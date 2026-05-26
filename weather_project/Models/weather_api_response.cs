@@ -1,0 +1,8 @@
+namespace weather_project.Models;
+
+public class weather_api_response
+{
+    public List<weather_current_condition> current_condition { get; set; } = new();
+
+    public List<weather_nearest_area> nearest_area { get; set; } = new();
+}

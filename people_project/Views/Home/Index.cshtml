@@ -1,0 +1,76 @@
+﻿@model people_project.Models.people_index_view_model
+
+@{
+    ViewData["Title"] = "people";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <div>
+        <h1 class="h3 mb-1">people training project</h1>
+        <p class="text-muted mb-0">nacteni json, filtrovani, detail, statistics a crud zaklad</p>
+    </div>
+    <div>
+        <a asp-action="Create" class="btn btn-primary">pridat osobu</a>
+        <a asp-action="Statistics" class="btn btn-outline-secondary">statistiky</a>
+    </div>
+</div>
+
+<div class="card mb-4 shadow-sm">
+    <div class="card-body">
+        <form method="get" class="row g-3 align-items-end">
+            <div class="col-md-5">
+                <label asp-for="search_jmeno" class="form-label"></label>
+                <input asp-for="search_jmeno" class="form-control" />
+            </div>
+            <div class="col-md-5">
+                <label asp-for="search_prijmeni" class="form-label"></label>
+                <input asp-for="search_prijmeni" class="form-control" />
+            </div>
+            <div class="col-md-2 d-grid gap-2">
+                <button type="submit" class="btn btn-primary">vyhledat</button>
+                <a asp-action="Index" class="btn btn-outline-secondary">reset</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-3"><div class="border rounded p-3">pocet lidi: <strong>@Model.statistics.pocet_lidi</strong></div></div>
+    <div class="col-md-3"><div class="border rounded p-3">prumerny vek: <strong>@Model.statistics.prumerny_vek</strong></div></div>
+    <div class="col-md-3"><div class="border rounded p-3">prumerna vyska: <strong>@Model.statistics.prumerna_vyska_cm cm</strong></div></div>
+    <div class="col-md-3"><div class="border rounded p-3">prumerna vaha: <strong>@Model.statistics.prumerna_vaha_kg kg</strong></div></div>
+</div>
+
+<div class="table-responsive shadow-sm">
+    <table class="table table-striped align-middle mb-0">
+        <thead class="table-light">
+            <tr>
+                <th>jmeno</th>
+                <th>prijmeni</th>
+                <th>datum narozeni</th>
+                <th>vyska</th>
+                <th>vaha</th>
+                <th>mesto</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var l_person in Model.people)
+            {
+                <tr>
+                    <td>@l_person.jmeno</td>
+                    <td>@l_person.prijmeni</td>
+                    <td>@l_person.datum_narozeni.ToString("dd.MM.yyyy")</td>
+                    <td>@l_person.vyska_cm cm</td>
+                    <td>@l_person.vaha_kg kg</td>
+                    <td>@l_person.mesto</td>
+                    <td class="text-end">
+                        <a asp-action="Details" asp-route-id="@l_person.id" class="btn btn-sm btn-outline-primary">detail</a>
+                        <a asp-action="Edit" asp-route-id="@l_person.id" class="btn btn-sm btn-outline-secondary">upravit</a>
+                        <a asp-action="Delete" asp-route-id="@l_person.id" class="btn btn-sm btn-outline-danger">smazat</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

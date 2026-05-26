@@ -1,0 +1,47 @@
+@model people_project.Models.person_item
+
+@{
+	ViewData["Title"] = "create";
+}
+
+<div class="row justify-content-center">
+	<div class="col-lg-8">
+		<div class="card shadow-sm">
+			<div class="card-body">
+				<h1 class="h3 mb-3">pridat osobu</h1>
+				<form asp-action="Create" method="post">
+					<div class="row g-3">
+						<div class="col-md-6">
+							<label asp-for="jmeno" class="form-label"></label>
+							<input asp-for="jmeno" class="form-control" />
+						</div>
+						<div class="col-md-6">
+							<label asp-for="prijmeni" class="form-label"></label>
+							<input asp-for="prijmeni" class="form-control" />
+						</div>
+						<div class="col-md-4">
+							<label asp-for="datum_narozeni" class="form-label"></label>
+							<input asp-for="datum_narozeni" type="date" class="form-control" />
+						</div>
+						<div class="col-md-4">
+							<label asp-for="vyska_cm" class="form-label"></label>
+							<input asp-for="vyska_cm" class="form-control" />
+						</div>
+						<div class="col-md-4">
+							<label asp-for="vaha_kg" class="form-label"></label>
+							<input asp-for="vaha_kg" class="form-control" />
+						</div>
+						<div class="col-12">
+							<label asp-for="mesto" class="form-label"></label>
+							<input asp-for="mesto" class="form-control" />
+						</div>
+					</div>
+					<div class="mt-3 d-flex gap-2">
+						<button type="submit" class="btn btn-primary">ulozit</button>
+						<a asp-action="Index" class="btn btn-secondary">zpet</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
