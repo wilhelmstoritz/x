@@ -6,6 +6,33 @@ NObodyknows3V3RYTH1NG
 
 https://github.com/wilhelmstoritz/x
 
+===
+do jednoho solution mam vypracovane jednotlive projekty:
+
+Projekt 1 — People
+načíst JSON
+filtrovat
+statistiky
+detail
+moznost pridava/mazat lidi apod
+
+Projekt 2 — Movies API
+HttpClient
+async/await
+
+Projekt 3 — Weather API
+nested JSON
+DTO modely
+
+vyber jeden z projektu (ten nejvhodnejsi) a uprav ho aby splnoval zadani:
+x
+
+pridej dalsi projekt tak, aby splnoval zadani:
+x
+
+vsechen kod, nazvy trid, objektu a promennych pis pouze malymi pismeny pomoci snake_case. pouzivej prefixy m_, t_, l_, g_ a dalsi bezne pro promenne metod, temporary a lokalni/globalni tak jak byva zvykem. komentare pis take pouze malymi pismeny a anglicky.
+
+===
 ---
 Mam MS Visual Studio 2026 a v nem nainstalovane Visual Studio Build Tools 2022 abych mohl pracovat a sdilet projekty/solution vytvorene jak v MSVS 2026 tak i MSVS 2022. V tymu mame ruzne obe verze. Jak vytvorit novy projekt/solution pro MSVS 2022 tak, abych jej mohl sdilet s ostatnimi ?
 ---
@@ -56,5 +83,6 @@ nested JSON
 DTO modely
 
 vsechen kod, nazvy trid, objektu a promennych pis pouze malymi pismeny pomoci snake_case. pouzivej prefixy m_, t_, l_, g_ a dalsi bezne pro promenne metod, temporary a lokalni/globalni tak jak byva zvykem. komentare pis take pouze malymi pismeny a anglicky.
+---
 ---
 
