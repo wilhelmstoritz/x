@@ -1,0 +1,60 @@
+vlc028@vsb.cz
+vimZEnicN3V1M!
+
+wilhelm.x.storitz@gmail.com
+NObodyknows3V3RYTH1NG
+
+https://github.com/wilhelmstoritz/x
+
+---
+Mam MS Visual Studio 2026 a v nem nainstalovane Visual Studio Build Tools 2022 abych mohl pracovat a sdilet projekty/solution vytvorene jak v MSVS 2026 tak i MSVS 2022. V tymu mame ruzne obe verze. Jak vytvorit novy projekt/solution pro MSVS 2022 tak, abych jej mohl sdilet s ostatnimi ?
+---
+vyucujici poslal mail:
+
+"Dobrý den, zítra proběhne ohlášený zápočtový test z předmětu C# 2.
+V rámci přípravy počítejte s tím, že zadání pro vás bude pokrývat řešení webové aplikace, tj. ASP.NET, MVC apod. Zadání nebude směřováno na desktopovou aplikaci."
+
+Myslim ze na zaklade toho muzu ocekavat nacitani  nejakych dat z nejakeho externiho odkazu (URL API) nebo lokalniho JSON souboru a statistiky z toho v tak trech view nebo neco podobneho. Zvolil jsem proto projekt ASP.NET Core Web App (Model-View-Controller) se štítkem jazyka C#.
+
+potrebuji vytvorit pripravu abych mel na zitrek nejaky zaklad, napadaji me napriklad nasledujici moznosti:
+
+Varianta A:
+vytvor mi nejaky testovaci JSON soubor s daty napri pro osobu (jmeno, prijmeni, datum narozeni, vyska vaha) alespon s 10 ruznymi lidmi. Vytvor ukazkovy kod pro jeho nacteni a vypsani do View abych mel na zitrek zaklad - neco jako formular kam zadam jmeno a/nebo prijmeni a vyhledam a vypisu data. V dalsim view treba nejake statistiky (pocet lidi, prumerny vek, prumerna a maximalni vyska a vaha). Pak totez priprav pro nacteni externiho JSONu pres HttpClient.
+
+Varianta B
+Načtěte data z veřejného API o filmech a zobrazte:
+seznam filmů
+detail filmu
+statistiky ratingu
+
+Varianta C
+Načtěte JSON soubor studentů a vytvořte:
+seznam
+filtrování
+statistiky známek
+
+Varianta D
+Zobrazte data počasí z API.
+
+takze do jednoho solution mam vypracovane jednotlive projekty:
+
+Projekt 1 — People
+to je podle me NEJDŮLEŽITĚJŠÍ, abych umel:
+načíst JSON
+filtrovat
+statistiky
+detail
+moznost pridava/mazat lidi apod
+
+Projekt 2 — Movies API
+Přidej:
+HttpClient
+async/await
+
+Projekt 3 — Weather API
+nested JSON
+DTO modely
+
+vsechen kod, nazvy trid, objektu a promennych pis pouze malymi pismeny pomoci snake_case. pouzivej prefixy m_, t_, l_, g_ a dalsi bezne pro promenne metod, temporary a lokalni/globalni tak jak byva zvykem. komentare pis take pouze malymi pismeny a anglicky.
+---
+
