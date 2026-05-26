@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\working-area\\visual-studio\\test\\webapp\\webapp.csproj": {}
+    "E:\\working-area\\github\\x\\webapp\\webapp.csproj": {}
   },
   "projects": {
-    "E:\\working-area\\visual-studio\\test\\webapp\\webapp.csproj": {
+    "E:\\working-area\\github\\x\\webapp\\webapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\working-area\\visual-studio\\test\\webapp\\webapp.csproj",
+        "projectUniqueName": "E:\\working-area\\github\\x\\webapp\\webapp.csproj",
         "projectName": "webapp",
-        "projectPath": "E:\\working-area\\visual-studio\\test\\webapp\\webapp.csproj",
+        "projectPath": "E:\\working-area\\github\\x\\webapp\\webapp.csproj",
         "packagesPath": "C:\\Users\\vlk\\.nuget\\packages\\",
-        "outputPath": "E:\\working-area\\visual-studio\\test\\webapp\\obj\\",
+        "outputPath": "E:\\working-area\\github\\x\\webapp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,16 +22,16 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "framework": "net8.0",
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "framework": "net7.0",
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -48,9 +48,9 @@
         "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "framework": "net8.0",
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "framework": "net7.0",
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",
@@ -62,6 +62,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -70,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
